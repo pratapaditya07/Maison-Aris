@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 11vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    padding: 0vw 2vw;
+    color: white;
+    mix-blend-mode : difference;
+
+}
+
+header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'telma', sans-serif;
+    font-weight: 500;
+    font-size: 1.85em;
+}
+
+nav{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+#left_nav ul , #right_nav ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    list-style: none;
+    font-family: "satoshi", sans-serif;
+    text-transform: uppercase;
+    font-weight: 430;
+}
+
+
+#left_nav ul li:hover , #right_nav ul li:hover{
+    color: #313131;
+    cursor: pointer;
+}
+
+#women_dropbox{
+    height: 50vh;
+    width: 100%;
+    background-color: tomato;
+    position: absolute;
+}
+
+#men_dropbox{
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(189, 107, 107);
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hero{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
