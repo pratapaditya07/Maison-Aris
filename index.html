@@ -14,9 +14,9 @@
         <nav>
             <div id="left_nav">
                 <ul>
+                    <li class="menu-item" data-target="women_dropbox">women</li>
                     <li>highlight</li>
-                    <li>women</li>
-                    <li>men</li>
+                    <li class="menu-item" data-target="men_dropbox">men</li>
                     <li>SL PRODUCTIONs</li>
                 </ul>
             </div>
@@ -32,31 +32,126 @@
     </header>
 
     <main>
-        <div id="women_dropbox">
+        <div id="women_dropbox" class="dropbox">
             <div id="womens_outer_container">
-                <div id="women_clothing">WOMEN_CLOTHING</div>
-                <div id="swimwear">SWIMWEAR</div>
-                <div id="sports">SPORTS</div>
-                <div id="assessories">ASSESSORIES</div>
+                <div class="womens_inner_container" id="women_clothing">
+                    <ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">WOMENS CLOTHING</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>TOPS</li>
+                        <li>DRESSES</li>
+                        <li>JEANS</li>
+                        <li>SKIRT</li>
+                        <li>SWEATSHIRTS</li>
+                        <p>VIEW ALL</p>
+                    </ul>
+                </div>
+                <div class="womens_inner_container" id="swimwear"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">SHOES</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>MARY JANES</li>
+                        <li>SANDALS</li>
+                        <li>LOAFERS</li>
+                        <li>BOOTS</li>
+                        <li>HEELS</li>
+                        <li>SLIPPERS</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
+                <div class="womens_inner_container" id="sports"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">SPORTS</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>RUNNING</li>
+                        <li>SOCKS</li>
+                        <li>SKIIING</li>
+                        <li>SOFTMOVE</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
+                <div class="womens_inner_container" id="assessories"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">ASSESSORIES</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>BAGS</li>
+                        <li>JEWELLERY</li>
+                        <li>SUNGLASSES</li>
+                        <li>BELTS</li>
+                        <li>GLOVES</li>
+                        <li>HAT</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
             </div>
         </div>
-        <div id="men_dropbox">
+        <div id="men_dropbox" class="dropbox">
             <div id="mens_outer_container">
-                <div id="men_clothing">MEN_CLOTHING</div>
-                <div id="swimwear">SWIMWEAR</div>
-                <div id="sports">SPORTS</div>
-                <div id="assessories">ASSESSORIES</div>
+                <div class="mens_inner_container" id="men_clothing">
+                    <ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">MENS CLOTHING</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>T-SHIRTS</li>
+                        <li>SHIRTS</li>
+                        <li>JEANS & TRENCH</li>
+                        <li>JACKET & PANTS</li>
+                        <li>SWEATSHIRTS</li>
+                        <P>VIEW ALL</P>
+                    </ul>
+                </div>
+                <div class="mens_inner_container" id="swimwear"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">SHOES</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>SANDALS</li>
+                        <li>LOAFERS</li>
+                        <li>BOOTS</li>
+                        <li>SLIPPERS</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
+                <div class="mens_inner_container" id="sports"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">SPORTS</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>RUNNING</li>
+                        <li>SOCKS</li>
+                        <li>OUTERWEAR</li>
+                        <li>JOGGERS</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
+                <div class="mens_inner_container" id="assessories"><ul>
+                        <a class="dropbox_heading" href="sdvcusdbciusnics">ASSESSORIES</a>
+                        <a href="ydgcsuycus">NEW ARRIVALS</a>
+
+                        <li>BAGS</li>
+                        <li>JEWELLERY</li>
+                        <li>SUNGLASSES</li>
+                        <li>BELTS</li>
+                        <li>GLOVES</li>
+                        <li>HAT</li>
+                        <P>VIEW ALL</P>
+                    </ul></div>
             </div>
         </div>
         <section id="hero">
             <video src="media/video/maisonAris_hero_cutted.mp4" autoplay loop muted height="100%" width="100%"></video>
         </section>
 
-        <section id="collections">
-            <h3>Featured Collections</h3>
-            <div class="collection">
-                <img src="collection1.jpg" alt="Collection 1">
-                <h4>Collection 1</h4>
+        <section id="categories">
+            <div class="category_images" id="category_women">
+                <div id="category_women_image"></div>
+                <div id="category_women_name">
+                    <p class="bold">WOMEN</p>
+                    <p>EXPLORE</p>
+                </div>
+            </div>
+            <div class="category_images" id="category_men">
+                <div id="category_men_image"></div>
+                <div id="category_men_name">
+                    <p class="bold">MEN</p>
+                    <p>EXPLORE</p>
+                </div>
+            </div>
+        </section>
     </main>
 
 

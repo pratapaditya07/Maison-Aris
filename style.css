@@ -50,29 +50,193 @@ nav{
     cursor: pointer;
 }
 
+.dropbox {
+position: absolute;
+top: 0px; /* adjust below header */
+left: 0;
+width: 100%;
+margin-top: -70vh; /* hidden initially */
+transition: margin-top 0.5s ease;
+background: white; /* just for visibility */
+z-index: 999;
+}
+
+
 #women_dropbox{
-    height: 50vh;
+    height: 70vh;
     width: 100%;
-    background-color: tomato;
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: -70vh;
+
+}
+
+#womens_outer_container{
+    height: 45vh;
+    width: 100%;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.womens_inner_container{
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    margin-left: 2vw;
+    font-size: 13px;
+    font-family: "satoshi", sans-serif;
+}
+
+.womens_inner_container ul{
+    list-style: none;
+}
+.womens_inner_container ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.womens_inner_container ul p{
+    margin: 1.4vw 0vw;
+}
+
+.womens_inner_container ul li{
+    margin-top: 0.4vh;
 }
 
 #men_dropbox{
-    height: 40vh;
+    height: 70vh;
     width: 100%;
-    background-color: rgb(189, 107, 107);
+    background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
+    font-size: 13px;
+    line-height: 16px;
+    z-index: 1;
+    margin-top: -70vh;
 }
 
+#mens_outer_container{
+    height: 45vh;
+    width: 100%;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 
+.mens_inner_container{
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    margin-left: 2vw;
+    font-size: 13px;
+    font-family: "satoshi", sans-serif;
+}
 
+.mens_inner_container ul{
+    list-style: none;
+}
+.mens_inner_container ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 560;
+}
 
+.mens_inner_container ul p{
+    margin: 1.4vw 0vw;
+    color: #E50010;
+}
 
+.mens_inner_container ul li{
+    margin-top: 0.4vh;
+}
 
+.mens_inner_container ul li:hover{
+    color: #313131;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
+#hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
 
+#hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* important for luxury look */
+    transform: translate(-50%, -50%);
+    opacity: 65%;
+}
 
+#categories{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: relative;
+}
 
+#category_women{
+    left: 20%;
+    top: 15vh;
+}
+
+#category_women_image{
+    height: 70vh;
+    background-image: url(media/image/category_page_image_w2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#category_men{
+    left: 55%;
+    top: 15vh;
+}
+
+.category_images{
+    height: 80vh;
+    width: 25%;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+}
+
+#category_men_image:hover , #category_women_image:hover{
+    scale: 1.02;
+    transition: all 0.3s ease-in-out;
+}
+
+#category_men_image{
+    height: 70vh;
+    background-image: url(media/image/category_page_image_m.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#category_men_name p , #category_women_name p{
+    text-align: center;
+    font-family: "satoshi", sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+
+}
+
+.bold{
+    font-weight: 600;
+}
 
 
 
