@@ -1,4 +1,4 @@
-/* ORIGINAL CSS PLUS SNAP SCROLLING ADDITIONS */
+/* COMPLETE CSS WITH STICKY POSITIONING AND SCROLL FIXES */
 
 *{
     margin: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* SNAP SCROLLING SETUP - IMPROVED */
+/* SNAP SCROLLING SETUP WITH JS CONTROL */
 html {
     scroll-behavior: smooth;
     overflow: hidden;
@@ -15,16 +15,16 @@ html {
 body {
     overflow: hidden;
     height: 100vh;
-    background: #000; /* Prevent white flash */
+    background: #000;
 }
 
 .scroll-container {
     height: 100vh;
     overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    /* Prevent flicker */
+    scroll-snap-type: none; /* Disabled - JS will handle */
+    scroll-behavior: auto; /* Let JS control smooth scrolling */
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
     will-change: scroll-position;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -35,7 +35,6 @@ body {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     position: relative;
-    /* Prevent flicker */
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -68,6 +67,7 @@ nav{
     justify-content: space-between;
     font-size: 13px;
     line-height: 16px;
+    padding: 0vw 1vw 0vw 0vw ;
 }
 
 #left_nav ul, #right_nav ul{
@@ -148,7 +148,7 @@ nav{
     text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HERO SECTION WITH STICKY */
 #hero {
     position: sticky;
     top: 0;
@@ -169,7 +169,21 @@ nav{
     opacity: 65%;
 }
 
-/* CATEGORIES SECTION */
+#velvet_btn{
+    position: absolute;
+    top: 87%;
+    left: 49%;
+    font-family: 'satoshi', sans-serif;
+    font-size: 12px;
+    color: white;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CATEGORIES SECTION WITH STICKY */
 #categories{
     height: 100vh;
     width: 100%;
@@ -181,25 +195,37 @@ nav{
 }
 
 .category_images{
-    height: 84vh;
-    width: 25%;
+    height: 80vh;
+    width: 22%;
     cursor: pointer;
     position: absolute;
     overflow: hidden;
 }
 
 #category_women{
-    left: 20%;
+    left: 28%;
     top: 15vh;
 }
 
 #category_women_image{
-    height: 70vh;
-    background-image: url(media/image/category_page_image_w2.jpg);
+    height: 72vh;
+    background-image: url(media/image/category_page_image_w5.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
+}
+
+#category_women_name{
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3vh;
 }
 
 #category_men{
@@ -208,12 +234,24 @@ nav{
 }
 
 #category_men_image{
-    height: 70vh;
-    background-image: url(media/image/category_page_image_m.jpg);
+    height: 72vh;
+    background-image: url(media/image/category_page_image_w4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: transform 0.3s ease-in-out;
+}
+
+#category_men_name{
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3vh;
 }
 
 #category_men_image:hover, #category_women_image:hover{
@@ -228,10 +266,10 @@ nav{
 }
 
 .bold{
-    font-weight: 600;
+    font-weight: 800;
 }
 
-/* ADDITIONAL SECTIONS STYLING */
+/* ADDITIONAL SECTIONS WITH STICKY */
 #about{
     background-color: #e8e8e8;
     display: flex;
@@ -247,14 +285,19 @@ nav{
     border-radius: 10px;    
 }
 
-
 #contact{
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background-color: #e7e8e4;
     display: flex;
     align-items: center;
     justify-content: center;
     position: sticky;
     top: 0;
+}
+
+#contact img{
+    height: 100vh;
+    width: 100%;
+    border-radius: 10px;    
 }
 
 /* SCROLL INDICATOR (OPTIONAL) */
@@ -299,5 +342,192 @@ nav{
     .womens_inner_container, .mens_inner_container {
         width: 20%;
         margin-left: 1vw;
+    }
+}
+
+/* ADD THESE UPDATES TO YOUR EXISTING CSS */
+
+/* LUXURY SCROLL OPTIMIZATIONS */
+html {
+    scroll-behavior: auto; /* Let JS handle smoothness */
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: #000;
+    font-family: 'satoshi', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0; /* For loading animation */
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: hidden; /* Disable default scroll */
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Hide scrollbar for luxury feel */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.snap-section {
+    height: 100vh;
+    position: relative;
+    /* Performance optimizations */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ENHANCED DROPDOWN TRANSITIONS */
+.dropbox {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    margin-top: -70vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    z-index: 999;
+    font-size: 13px;
+    line-height: 16px;
+    transition: margin-top 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* HERO SECTION ENHANCEMENTS */
+#hero {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+#hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    opacity: 0.65;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* VELVET BUTTON ENHANCEMENT */
+#velvet_btn {
+    position: absolute;
+    top: 87%;
+    left: 49%;
+    font-family: 'satoshi', sans-serif;
+    font-size: 12px;
+    color: white;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+#velvet_btn:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* CATEGORY IMAGES ENHANCEMENT */
+.category_images {
+    height: 80vh;
+    width: 22%;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.category_images:hover {
+    transform: translateY(-5px);
+}
+
+#category_women_image, #category_men_image {
+    height: 72vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#category_women_image:hover, #category_men_image:hover {
+    transform: scale(1.03);
+}
+
+
+/* NAVIGATION DOTS STYLING (if using) */
+.scroll-dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.scroll-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 2px solid transparent;
+}
+
+.scroll-dot:hover {
+    transform: scale(1.2);
+}
+
+.scroll-dot.active {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .scroll-dots {
+        right: 20px;
+        gap: 12px;
+    }
+    
+    .scroll-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .category_images {
+        width: 40%;
+    }
+    
+    #category_women {
+        left: 10%;
+    }
+    
+    #category_men {
+        right: 10%;
+        left: auto;
     }
 }
