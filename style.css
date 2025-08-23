@@ -1,18 +1,55 @@
+/* ORIGINAL CSS PLUS SNAP SCROLLING ADDITIONS */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* SNAP SCROLLING SETUP - IMPROVED */
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: #000; /* Prevent white flash */
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* Prevent flicker */
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.snap-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    /* Prevent flicker */
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* HEADER STYLES */
 header{
     height: 11vh;
     width: 100vw;
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     padding: 0vw 2vw;
     color: white;
-    mix-blend-mode : difference;
-
+    mix-blend-mode: difference;
 }
 
 header h1{
@@ -33,7 +70,7 @@ nav{
     line-height: 16px;
 }
 
-#left_nav ul , #right_nav ul{
+#left_nav ul, #right_nav ul{
     height: 100%;
     display: flex;
     align-items: center;
@@ -44,36 +81,31 @@ nav{
     font-weight: 430;
 }
 
-
-#left_nav ul li:hover , #right_nav ul li:hover{
+#left_nav ul li:hover, #right_nav ul li:hover{
     color: #313131;
     cursor: pointer;
 }
 
+/* DROPDOWN STYLES - FIXED */
 .dropbox {
-position: absolute;
-top: 0px; /* adjust below header */
-left: 0;
-width: 100%;
-margin-top: -70vh; /* hidden initially */
-transition: margin-top 0.5s ease;
-background: white; /* just for visibility */
-z-index: 999;
-}
-
-
-#women_dropbox{
-    height: 70vh;
+    position: fixed;
+    top: 0px;
+    left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    position: absolute;
+    height: 70vh;
+    margin-top: -70vh; /* Hidden initially */
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 999;
     font-size: 13px;
     line-height: 16px;
-    margin-top: -70vh;
-
 }
 
-#womens_outer_container{
+#women_dropbox, #men_dropbox {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#womens_outer_container, #mens_outer_container {
     height: 45vh;
     width: 100%;
     margin-top: 20vh;
@@ -82,7 +114,7 @@ z-index: 999;
     align-items: center;
 }
 
-.womens_inner_container{
+.womens_inner_container, .mens_inner_container {
     height: 100%;
     width: 15%;
     background-color: transparent;
@@ -91,81 +123,38 @@ z-index: 999;
     font-family: "satoshi", sans-serif;
 }
 
-.womens_inner_container ul{
+.womens_inner_container ul, .mens_inner_container ul {
     list-style: none;
 }
-.womens_inner_container ul a{
+
+.womens_inner_container ul a, .mens_inner_container ul a {
     text-decoration: none;
     color: black;
     font-weight: 550;
 }
 
-.womens_inner_container ul p{
-    margin: 1.4vw 0vw;
-}
-
-.womens_inner_container ul li{
-    margin-top: 0.4vh;
-}
-
-#men_dropbox{
-    height: 70vh;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    font-size: 13px;
-    line-height: 16px;
-    z-index: 1;
-    margin-top: -70vh;
-}
-
-#mens_outer_container{
-    height: 45vh;
-    width: 100%;
-    margin-top: 20vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.mens_inner_container{
-    height: 100%;
-    width: 15%;
-    background-color: transparent;
-    margin-left: 2vw;
-    font-size: 13px;
-    font-family: "satoshi", sans-serif;
-}
-
-.mens_inner_container ul{
-    list-style: none;
-}
-.mens_inner_container ul a{
-    text-decoration: none;
-    color: black;
-    font-weight: 560;
-}
-
-.mens_inner_container ul p{
+.womens_inner_container ul p, .mens_inner_container ul p {
     margin: 1.4vw 0vw;
     color: #E50010;
 }
 
-.mens_inner_container ul li{
+.womens_inner_container ul li, .mens_inner_container ul li {
     margin-top: 0.4vh;
 }
 
-.mens_inner_container ul li:hover{
+.mens_inner_container ul li:hover, .womens_inner_container ul li:hover {
     color: #313131;
     cursor: pointer;
     text-decoration: underline;
 }
 
+/* HERO SECTION */
 #hero {
-    position: relative;
+    position: sticky !important;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background-color: rgb(0, 0, 0);
 }
 
 #hero video {
@@ -174,17 +163,26 @@ z-index: 999;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    object-fit: cover; /* important for luxury look */
+    object-fit: cover;
     transform: translate(-50%, -50%);
     opacity: 65%;
 }
 
+/* CATEGORIES SECTION */
 #categories{
     height: 100vh;
     width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
-    position: relative;
+    position: sticky !important;
+}
+
+.category_images{
+    height: 84vh;
+    width: 25%;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
 }
 
 #category_women{
@@ -198,24 +196,12 @@ z-index: 999;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
 }
 
 #category_men{
     left: 55%;
     top: 15vh;
-}
-
-.category_images{
-    height: 80vh;
-    width: 25%;
-    cursor: pointer;
-    position: absolute;
-    overflow: hidden;
-}
-
-#category_men_image:hover , #category_women_image:hover{
-    scale: 1.02;
-    transition: all 0.3s ease-in-out;
 }
 
 #category_men_image{
@@ -224,46 +210,74 @@ z-index: 999;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
 }
 
-#category_men_name p , #category_women_name p{
+#category_men_image:hover, #category_women_image:hover{
+    transform: scale(1.02);
+}
+
+#category_men_name p, #category_women_name p{
     text-align: center;
     font-family: "satoshi", sans-serif;
     font-size: 13px;
     line-height: 16px;
-
 }
 
 .bold{
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#hero{
-    background-color: rgb(0, 0, 0);
-    height: 100vh;
+/* ADDITIONAL SECTIONS STYLING */
+#about, #contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky !important;
 }
 
+/* SCROLL INDICATOR (OPTIONAL) */
+.scroll-indicator {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.scroll-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scroll-dot.active {
+    background: white;
+    transform: scale(1.5);
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .category_images {
+        width: 40%;
+    }
+    
+    #category_women {
+        left: 10%;
+    }
+    
+    #category_men {
+        right: 10%;
+        left: auto;
+    }
+    
+    .womens_inner_container, .mens_inner_container {
+        width: 20%;
+        margin-left: 1vw;
+    }
+}

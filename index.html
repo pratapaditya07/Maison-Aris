@@ -31,14 +31,15 @@
         </nav>
     </header>
 
-    <main>
+    <!-- SCROLL CONTAINER FOR SNAP SCROLLING -->
+    <div class="scroll-container">
+        <!-- DROPDOWN MENUS -->
         <div id="women_dropbox" class="dropbox">
             <div id="womens_outer_container">
                 <div class="womens_inner_container" id="women_clothing">
                     <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">WOMENS CLOTHING</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p><a href="kbicbisb">NEW ARRIVALS</a></p>
                         <li>TOPS</li>
                         <li>DRESSES</li>
                         <li>JEANS</li>
@@ -47,10 +48,10 @@
                         <p>VIEW ALL</p>
                     </ul>
                 </div>
-                <div class="womens_inner_container" id="swimwear"><ul>
+                <div class="womens_inner_container" id="swimwear">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">SHOES</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>MARY JANES</li>
                         <li>SANDALS</li>
                         <li>LOAFERS</li>
@@ -58,21 +59,23 @@
                         <li>HEELS</li>
                         <li>SLIPPERS</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
-                <div class="womens_inner_container" id="sports"><ul>
+                    </ul>
+                </div>
+                <div class="womens_inner_container" id="sports">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">SPORTS</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>RUNNING</li>
                         <li>SOCKS</li>
                         <li>SKIIING</li>
                         <li>SOFTMOVE</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
-                <div class="womens_inner_container" id="assessories"><ul>
+                    </ul>
+                </div>
+                <div class="womens_inner_container" id="assessories">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">ASSESSORIES</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>BAGS</li>
                         <li>JEWELLERY</li>
                         <li>SUNGLASSES</li>
@@ -80,16 +83,17 @@
                         <li>GLOVES</li>
                         <li>HAT</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div id="men_dropbox" class="dropbox">
             <div id="mens_outer_container">
                 <div class="mens_inner_container" id="men_clothing">
                     <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">MENS CLOTHING</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>T-SHIRTS</li>
                         <li>SHIRTS</li>
                         <li>JEANS & TRENCH</li>
@@ -98,30 +102,32 @@
                         <P>VIEW ALL</P>
                     </ul>
                 </div>
-                <div class="mens_inner_container" id="swimwear"><ul>
+                <div class="mens_inner_container" id="swimwear">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">SHOES</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>SANDALS</li>
                         <li>LOAFERS</li>
                         <li>BOOTS</li>
                         <li>SLIPPERS</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
-                <div class="mens_inner_container" id="sports"><ul>
+                    </ul>
+                </div>
+                <div class="mens_inner_container" id="sports">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">SPORTS</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>RUNNING</li>
                         <li>SOCKS</li>
                         <li>OUTERWEAR</li>
                         <li>JOGGERS</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
-                <div class="mens_inner_container" id="assessories"><ul>
+                    </ul>
+                </div>
+                <div class="mens_inner_container" id="assessories">
+                    <ul>
                         <a class="dropbox_heading" href="sdvcusdbciusnics">ASSESSORIES</a>
-                        <a href="ydgcsuycus">NEW ARRIVALS</a>
-
+                        <p href="ydgcsuycus">NEW ARRIVALS</p>
                         <li>BAGS</li>
                         <li>JEWELLERY</li>
                         <li>SUNGLASSES</li>
@@ -129,14 +135,18 @@
                         <li>GLOVES</li>
                         <li>HAT</li>
                         <P>VIEW ALL</P>
-                    </ul></div>
+                    </ul>
+                </div>
             </div>
         </div>
-        <section id="hero">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="snap-section">
             <video src="media/video/maisonAris_hero_cutted.mp4" autoplay loop muted height="100%" width="100%"></video>
         </section>
 
-        <section id="categories">
+        <!-- CATEGORIES SECTION -->
+        <section id="categories" class="snap-section">
             <div class="category_images" id="category_women">
                 <div id="category_women_image"></div>
                 <div id="category_women_name">
@@ -152,13 +162,20 @@
                 </div>
             </div>
         </section>
-    </main>
 
+        <!-- ADD MORE SECTIONS HERE IF NEEDED -->
+        <section id="about" class="snap-section">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; font-family: 'satoshi', sans-serif; font-size: 3rem; color: #313131;">
+                <h2>ABOUT MAISON ARIS</h2>
+            </div>
+        </section>
 
-
-
-
-
+        <section id="contact" class="snap-section">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; font-family: 'satoshi', sans-serif; font-size: 3rem; color: #313131;">
+                <h2>CONTACT US</h2>
+            </div>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
