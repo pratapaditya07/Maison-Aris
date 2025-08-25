@@ -10,13 +10,13 @@ document.querySelectorAll(".menu-item").forEach(item => {
     item.addEventListener("mouseenter", () => {
         clearTimeout(hideTimeout);
         targetBox.style.marginTop = "0";
-        targetBox.style.transition = "margin-top 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+        targetBox.style.transition = "margin-top 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
     });
 
     item.addEventListener("mouseleave", () => {
         hideTimeout = setTimeout(() => {
             targetBox.style.marginTop = "-70vh";
-            targetBox.style.transition = "margin-top 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+            targetBox.style.transition = "margin-top 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
         }, 200);
     });
 
@@ -300,7 +300,7 @@ function createNavigationDots() {
         gap: 15px;
     `;
     
-    const sectionNames = ['hero', 'categories', 'about', 'contact'];
+    const sectionNames = ['hero', 'categories', 'about', 'contact', 'production_video_page' , 'footer'];
     
     sectionNames.forEach((name, index) => {
         const dot = document.createElement('div');
