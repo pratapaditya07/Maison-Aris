@@ -106,12 +106,12 @@ nav{
 }
 
 #womens_outer_container, #mens_outer_container {
-    height: 45vh;
+    height: auto;
     width: 100%;
     margin-top: 20vh;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: top;
 }
 
 .womens_inner_container, .mens_inner_container {
@@ -270,7 +270,7 @@ nav{
 }
 
 /* ADDITIONAL SECTIONS WITH STICKY */
-#about{
+#womens_section{
     background-color: #e8e8e8;
     display: flex;
     align-items: center;
@@ -279,14 +279,14 @@ nav{
     top: 0;
 }
 
-#about img{
+#womens_section img{
     height: 100vh;
     width: 100%;
     border-radius: 10px;    
 }
 
-#contact{
-    background-color: #e7e8e4;
+#mens_section{
+    background-color: #F8F4F1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -294,7 +294,7 @@ nav{
     top: 0;
 }
 
-#contact img{
+#mens_section img{
     height: 100vh;
     width: 100%;
     border-radius: 10px;    
@@ -431,8 +431,8 @@ body {
 /* VELVET BUTTON ENHANCEMENT */
 #velvet_btn {
     position: absolute;
-    top: 87%;
-    left: 49%;
+    top: 92%;
+    left: 47%;
     font-family: 'satoshi', sans-serif;
     font-size: 12px;
     color: white;
@@ -560,28 +560,51 @@ body {
 }
 
 #footer_outerdiv{
-    height: 30vh;
+    height: 20vh;
     width: 60vw;
     position: absolute;
     top: 15%;
     left: 20%;
     display: flex;
     justify-content: center;
+    margin-top: 6vh;
 }
 .innerdivs{
     height: 100%;
     width: 45%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     font-family: 'satoshi', sans-serif;
+    text-transform: uppercase;
+    font-size: 12.8px;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.innerdivs ul{
+    list-style: none;
+    gap: 0.6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.innerdivs ul li:hover{
+    color: #313131;
+    cursor: pointer;
 }
 
 #social_media_icons{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     gap: 50px;
+    font-size: 19px;
+}
+
+#social_media_icons i{
+    cursor: pointer;
 }
