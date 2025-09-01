@@ -42,7 +42,7 @@ body {
 
 /* HEADER STYLES */
 header{
-    height: 11vh;
+    height: 8vh;
     width: 100vw;
     position: fixed;
     z-index: 1000;
@@ -56,9 +56,9 @@ header h1{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'telma', sans-serif;
-    font-weight: 500;
-    font-size: 1.85em;
+    font-family: 'yesteryear';
+    font-weight: 200;
+    font-size: 2.5em;
 }
 
 nav{
@@ -187,7 +187,6 @@ nav{
 #categories{
     height: 100vh;
     width: 100%;
-    background-color: rgb(255, 255, 255);
     display: flex;
     position: sticky;
     top: 0;
@@ -195,20 +194,21 @@ nav{
 }
 
 .category_images{
-    height: 80vh;
-    width: 22%;
+    height: 88vh !important;
+    width: 32% !important;
     cursor: pointer;
     position: absolute;
     overflow: hidden;
+    top: 10vh;
+
 }
 
 #category_women{
-    left: 28%;
-    top: 15vh;
+    left: 15%;
 }
 
 #category_women_image{
-    height: 72vh;
+    height: 80vh !important;
     background-image: url(media/image/category_page_image_w5.jpg);
     background-position: center;
     background-size: cover;
@@ -229,12 +229,11 @@ nav{
 }
 
 #category_men{
-    left: 55%;
-    top: 15vh;
+    right: 15%;
 }
 
 #category_men_image{
-    height: 72vh;
+    height: 80vh !important;
     background-image: url(media/image/category_page_image_w4.jpg);
     background-position: center;
     background-size: cover;
