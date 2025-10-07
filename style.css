@@ -15,7 +15,7 @@ html {
 body {
     overflow: hidden;
     height: 100vh;
-    background: #000;
+    background-color: #ffffff;
 }
 
 .scroll-container {
