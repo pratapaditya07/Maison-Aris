@@ -5,19 +5,16 @@ Responsive, fast, and easy to maintain.
 
 <p align="center">
   <!-- Replace with your deployed link or a demo gif -->
-  <a href="#-live-demo">Live Demo</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-tech-stack">Tech Stack</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-project-structure">Structure</a> •
-  <a href="#-deployment">Deployment</a>
+  <a href="#-live-demo">[Live Demo](https://maison-aris-madebyadi.vercel.app/)</a> •
+  <a href="#-features">E-Commerce , Luxury </a> •
+  <a href="#-tech-stack">HTML5 , CSS3 , JS(Vanilla.js) , GSAP </a> •
 </p>
 
 ---
 
 ## 🌐 Live Demo
 
-- **Website:** _Coming soon_  
+- **Website:** https://maison-aris-madebyadi.vercel.app/
 - **Screenshots:** See [`/assets/screenshots/`](./assets/screenshots/) (add homepage, product, and about page shots)
 
 ---
