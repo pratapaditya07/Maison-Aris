@@ -31,7 +31,7 @@ class MaisonArisScrollController {
     constructor() {
         this.scrollContainer = document.querySelector('.scroll-container');
         this.sections = document.querySelectorAll('.snap-section');
-        this.sectionNames = ['hero', 'categories', 'about', 'contact'];
+        this.sectionNames = ['hero', 'categories', 'womens_section', 'mens_section' , 'production_video_page', 'footer'];
         this.currentSection = 0;
         this.isScrolling = false;
         this.wheelAccumulator = 0;
@@ -73,15 +73,8 @@ class MaisonArisScrollController {
     updateSectionEffects() {
         // Update header color based on section
         const header = document.querySelector('header');
-        if (this.currentSection === 0) {
-            // Hero section - keep original style
-            header.style.color = 'white';
-            header.style.mixBlendMode = 'difference';
-        } else {
-            // Other sections
-            header.style.color = 'white';
-            header.style.mixBlendMode = 'difference';
-        }
+        header.style.color = 'white';
+        header.style.mixBlendMode = 'difference';
         
         // Video fade effect for hero section
         const heroVideo = document.querySelector('#hero video');
@@ -298,9 +291,10 @@ function createNavigationDots() {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        mix-blend-mode: difference;
     `;
     
-    const sectionNames = ['hero', 'categories', 'about', 'contact', 'production_video_page' , 'footer'];
+    const sectionNames = ['hero', 'categories', 'womens_section', 'mens_section', 'production_video_page', 'footer'];
     
     sectionNames.forEach((name, index) => {
         const dot = document.createElement('div');
@@ -350,4 +344,17 @@ function createNavigationDots() {
     
     // Check for section changes
     setInterval(updateActiveDot, 100);
+
+    document.getElementById('highlight').addEventListener('click', () => {
+    window.maisonScroll.smoothScrollTo(
+        sectionNames.indexOf('categories')
+    );
+});
+
+document.getElementById('production').addEventListener('click', () => {
+    window.maisonScroll.smoothScrollTo(
+        sectionNames.indexOf('production_video_page')
+    );
+});
 }
+
