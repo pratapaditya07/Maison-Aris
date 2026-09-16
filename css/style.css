@@ -209,7 +209,7 @@ nav{
 
 #category_women_image{
     height: 80vh !important;
-    background-image: url(media/image/category_page_image_w5.jpg);
+    background-image: url(../media/image/category_page_image_w5.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -234,7 +234,7 @@ nav{
 
 #category_men_image{
     height: 80vh !important;
-    background-image: url(media/image/category_page_image_w4.jpg);
+    background-image: url(../media/image/category_page_image_w4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
