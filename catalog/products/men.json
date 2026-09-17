@@ -1,0 +1,30 @@
+[
+    {
+        "id": "men-001",
+        "name": "PRODUCT ONE",
+        "price": 5999,
+        "colour": "BLACK",
+        "image": "../media/image/men/men-001.jpg"
+    },
+    {
+        "id": "men-002",
+        "name": "PRODUCT TWO",
+        "price": 6999,
+        "colour": "BEIGE",
+        "image": "../media/image/men/men-002.jpg"
+    },
+    {
+        "id": "men-003",
+        "name": "PRODUCT THREE",
+        "price": 7499,
+        "colour": "GREY",
+        "image": "../media/image/men/men-003.jpg"
+    },
+    {
+        "id": "men-004",
+        "name": "PRODUCT FOUR",
+        "price": 8499,
+        "colour": "BLACK",
+        "image": "../media/image/men/men-004.jpg"
+    }
+]

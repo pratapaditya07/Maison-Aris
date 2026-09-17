@@ -250,6 +250,14 @@ document.addEventListener("componentsLoaded", () => {
 
     // Optional: Add section navigation dots
     createNavigationDots();
+
+    document.getElementById("womens_section").addEventListener("click", () => {
+        window.location.href = "catalog/catalog.html?category=women";
+    });
+
+    document.getElementById("mens_section").addEventListener("click", () => {
+        window.location.href = "catalog/catalog.html?category=men";
+    });
 });
 
 // Optional: Create navigation dots

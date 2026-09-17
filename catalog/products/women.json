@@ -1,0 +1,37 @@
+[
+    {
+        "id": "women-001",
+        "name": "PRODUCT ONE",
+        "price": 5999,
+        "colour": "BLACK",
+        "image": "../media/image/women/women-001.jpg"
+    },
+    {
+        "id": "women-002",
+        "name": "PRODUCT TWO",
+        "price": 6999,
+        "colour": "CREAM",
+        "image": "../media/image/women/women-002.jpg"
+    },
+    {
+        "id": "women-003",
+        "name": "PRODUCT THREE",
+        "price": 7499,
+        "colour": "GREY",
+        "image": "../media/image/women/women-003.jpg"
+    },
+    {
+        "id": "women-004",
+        "name": "PRODUCT FOUR",
+        "price": 8499,
+        "colour": "BLACK",
+        "image": "../media/image/women/women-004.jpg"
+    },
+    {
+        "id": "women-005",  
+        "name": "PRODUCT FIVE",
+        "price": 8999,
+        "colour": "BLACK",
+        "image": "../media/image/women/women-005.jpg"
+    }
+]
