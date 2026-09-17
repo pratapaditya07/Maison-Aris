@@ -1,0 +1,55 @@
+#footer{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+#footer_outerdiv{
+    height: 20vh;
+    width: 60vw;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+}
+.innerdivs{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-family: 'satoshi', sans-serif;
+    text-transform: uppercase;
+    font-size: 12.8px;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.innerdivs ul{
+    list-style: none;
+    gap: 0.6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.innerdivs ul li:hover{
+    color: #313131;
+    cursor: pointer;
+}
+
+#social_media_icons{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 50px;
+    font-size: 19px;
+}
+
+#social_media_icons i{
+    cursor: pointer;
+}

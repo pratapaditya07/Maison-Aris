@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&A_ProductPage</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../product_page/product_page.css" type="text/css">
+    <link rel="stylesheet" href="../css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    
+    <!-- FONTS I WILL BE USING -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&f[]=cabinet-grotesk@1&f[]=chillax@1&f[]=stardom@400&f[]=supreme@1,2&f[]=boska@1,2&f[]=telma@1&f[]=dancing-script@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar Component -->
+    <div id="navbar"></div>
+
+    <div id="scroll_containers">
+
+        <div id="product_container">
+
+            <div id="left_container"></div>
+
+            <div id="right_container">
+                <div class="product-container">
+                    <h1 class="product-title">Product title</h1>
+        
+                    <div class="product-color">product-colour</div>
+        
+                    <div class="size-section">
+                        <label class="size-label" for="size-select">M&A SIZE</label>
+                        <select id="size-select" class="size-dropdown">
+                            <option value="" disabled selected>SELECT SIZE</option>
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+        
+                    <div class="size-guide">
+                        <a href="#size-guide">SIZE GUIDE</a>
+                    </div>
+        
+                    <p class="product-description">
+                        BOMBER JACKET WITH A STAND COLLAR, DROP SHOULDERS, AND A SHIRRED WAISTBAND.
+                    </p>
+        
+                    <button class="find-in-store-btn" onclick="findInStore()">
+                        FIND IN STORE
+                    </button>
+        
+                    <div class="additional-links">
+                        <a href="#more-details">MORE DETAILS</a>
+                        <a href="#customer-service">CUSTOMER SERVICE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- Footer Component -->
+        <div id="footer"></div>
+    </div>
+
+
+    <script src = "../js/components.js"></script>
+    <script src="product_script.js"></script>
+</body>
+</html>
