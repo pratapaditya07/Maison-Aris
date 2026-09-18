@@ -26,5 +26,19 @@
         "price": 8499,
         "colour": "BLACK",
         "image": "../media/image/men/men-004.jpg"
+    },
+    {
+        "id": "men-005",
+        "name": "PRODUCT FIVE",
+        "price": 9499,
+        "colour": "BLACK",
+        "image": "../media/image/men/men-005.png"
+    },
+    {
+        "id": "men-006",
+        "name": "PRODUCT SIX",
+        "price": 10499,
+        "colour": "BLACK",
+        "image": "../media/image/men/men-006.png"
     }
 ]

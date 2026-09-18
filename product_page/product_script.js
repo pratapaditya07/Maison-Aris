@@ -1,36 +1,138 @@
-// MAISON ARIS - LUXURY SMOOTH SCROLLING EXPERIENCE
-// Saint Laurent inspired smooth section transitions
+// ========================================
+// MAISON ARIS - PRODUCT PAGE
+// ========================================
 
-// Dropdown functionality (keep your existing code)
-document.querySelectorAll(".menu-item").forEach(item => {
-    const targetId = item.getAttribute("data-target");
-    const targetBox = document.getElementById(targetId);
-    let hideTimeout;
 
-    item.addEventListener("mouseenter", () => {
-        clearTimeout(hideTimeout);
-        targetBox.style.marginTop = "0";
-        targetBox.style.transition = "margin-top 1000ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-    });
+// GET PRODUCT ID FROM URL
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
 
-    item.addEventListener("mouseleave", () => {
-        hideTimeout = setTimeout(() => {
-            targetBox.style.marginTop = "-70vh";
-            targetBox.style.transition = "margin-top 1200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-        }, 200);
-    });
 
-    targetBox.addEventListener("mouseenter", () => clearTimeout(hideTimeout));
-    targetBox.addEventListener("mouseleave", () => {
-        targetBox.style.marginTop = "-70vh";
-    });
-});
+// GET ELEMENTS
+const leftContainer = document.getElementById("left_container");
+const productTitle = document.querySelector(".product-title");
+const productColor = document.querySelector(".product-color");
+
+
+// ========================================
+// CHECK PRODUCT ID
+// ========================================
+
+if (!productId) {
+
+    productTitle.textContent = "PRODUCT NOT FOUND";
+    productColor.textContent = "";
+
+} else {
+
+    loadProduct(productId);
+
+}
+
+
+// ========================================
+// LOAD PRODUCT
+// ========================================
+
+async function loadProduct(productId) {
+
+    try {
+
+        // men-001 → men
+        // women-001 → women
+        const category = productId.split("-")[0];
+
+        if (category !== "men" && category !== "women") {
+            throw new Error("Invalid product category");
+        }
+
+
+        // LOAD CORRESPONDING JSON
+        const response = await fetch(
+            `../catalog/products/${category}.json`
+        );
+
+
+        if (!response.ok) {
+            throw new Error(`Failed to load ${category}.json`);
+        }
+
+
+        const products = await response.json();
+
+
+        // FIND PRODUCT
+        const product = products.find(
+            item => item.id === productId
+        );
+
+
+        if (!product) {
+            throw new Error("Product not found");
+        }
+
+
+        // DISPLAY PRODUCT
+        displayProduct(product);
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        productTitle.textContent = "PRODUCT NOT FOUND";
+        productColor.textContent = "";
+        leftContainer.innerHTML = "";
+
+    }
+
+}
+
+
+// ========================================
+// DISPLAY PRODUCT
+// ========================================
+
+function displayProduct(product) {
+
+    // PRODUCT TITLE
+    productTitle.textContent = product.name;
+
+
+    // PRODUCT COLOUR
+    productColor.textContent = product.colour;
+
+
+    // PRODUCT IMAGE
+    leftContainer.innerHTML = `
+        <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="product-main-image"
+        >
+    `;
+
+}
+
+
+// ========================================
+// FIND IN STORE
+// ========================================
 
 function findInStore() {
-            const selectedSize = document.getElementById('size-select').value;
-            if (!selectedSize) {
-                alert('Please select a size first.');
-                return;
-            }
-            alert('Finding stores with your selected size...');
-        }
+
+    const selectedSize =
+        document.getElementById("size-select").value;
+
+
+    if (!selectedSize) {
+
+        alert("Please select a size first.");
+        return;
+
+    }
+
+
+    alert("Finding stores with your selected size...");
+
+}

@@ -95,11 +95,11 @@ body {
 
 }
 
-#category_women{
+#category_handbags{
     left: 15%;
 }
 
-#category_women_image{
+#category_handbags_image{
     height: 80vh !important;
     background-image: url(../media/image/lingerie_thumbnail.jpg);
     background-position: center;
@@ -108,7 +108,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-#category_women_name{
+#category_handbags_name{
     height: 8vh;
     width: 100%;
     position: absolute;
@@ -120,11 +120,11 @@ body {
     gap: 0.3vh;
 }
 
-#category_men{
+#category_lingerie{
     right: 15%;
 }
 
-#category_men_image{
+#category_lingerie_image{
     height: 80vh !important;
     background-image: url(../media/image/handheld_thumbnail.jpg);
     background-position: center;
@@ -133,7 +133,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-#category_men_name{
+#category_lingerie_name{
     height: 8vh;
     width: 100%;
     position: absolute;
@@ -145,11 +145,11 @@ body {
     gap: 0.3vh;
 }
 
-#category_men_image:hover, #category_women_image:hover{
+#category_lingerie_image:hover, #category_handbags_image:hover{
     transform: scale(1.02);
 }
 
-#category_men_name p, #category_women_name p{
+#category_lingerie_name p, #category_handbags_name p{
     text-align: center;
     font-family: "satoshi", sans-serif;
     font-size: 13px;

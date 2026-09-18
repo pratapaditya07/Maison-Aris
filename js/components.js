@@ -111,7 +111,7 @@ function initializeDropdownMenus() {
         dropdown.addEventListener(
             "mouseleave",
             () => {
-                dropdown.style.marginTop = "-70vh";
+                dropdown.style.marginTop = "-90vh";
             }
         );
     });
