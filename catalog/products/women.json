@@ -33,5 +33,19 @@
         "price": 8999,
         "colour": "BLACK",
         "image": "../media/image/women/women-005.jpg"
+    },
+    {
+        "id": "women-006",
+        "name": "PRODUCT SIX",
+        "price": 9999,
+        "colour": "CREAM",
+        "image": "../media/image/women/women-006.jpg"
+    },
+    {
+        "id": "women-007",      
+        "name": "PRODUCT SEVEN",
+        "price": 10999,
+        "colour": "GREY",
+        "image": "../media/image/women/women-007.jpg"
     }
 ]

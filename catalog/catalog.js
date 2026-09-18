@@ -41,19 +41,15 @@ async function loadProducts(category) {
             `products/${category}.json`
         );
 
-
         if (!response.ok) {
             throw new Error(
                 `Failed to load ${category}.json`
             );
         }
 
-
         const products = await response.json();
 
-
         displayProducts(products);
-
 
     } catch (error) {
 
@@ -78,12 +74,22 @@ function displayProducts(products) {
 
     productGrid.innerHTML = "";
 
-
-    products.forEach(product => {
+    products.forEach((product, index) => {
 
         const productCard = document.createElement("article");
 
         productCard.className = "product-card";
+
+        /*
+            Layout classes are controlled
+            by the product's position.
+        */
+
+        const layoutPosition = (index % 6) + 1;
+
+        productCard.classList.add(
+            `card-position-${layoutPosition}`
+        );
 
 
         productCard.innerHTML = `
@@ -112,6 +118,10 @@ function displayProducts(products) {
 
         `;
 
+
+        /* ========================================
+           PRODUCT CLICK
+        ======================================== */
 
         productCard.addEventListener("click", () => {
 
