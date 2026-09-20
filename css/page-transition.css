@@ -1,0 +1,24 @@
+/* ========================================
+   MAISON ARIS
+   PAGE TRANSITION
+======================================== */
+
+.page-transition {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #050505;
+
+    opacity: 1;
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    will-change: opacity;
+}
